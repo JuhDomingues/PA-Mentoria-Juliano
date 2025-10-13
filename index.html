@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mentoria Next Level - Conquiste Seu Cargo Executivo em 6 Meses</title>
+    <link rel="icon" type="image/jpeg" href="logo-branco.jpeg">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
@@ -13,6 +14,19 @@
     <section class="hero">
         <div class="container">
             <h1>Profissional, se você quer alcançar o <span class="highlight">próximo nível</span> da sua carreira, chegou a hora de conquistar seu <span class="highlight">Cargo Executivo em 6 meses</span></h1>
+
+            <div class="video-container">
+                <div id="hero-video"></div>
+                <div class="mute-overlay" id="mute-overlay">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+                        <line x1="23" y1="9" x2="17" y2="15"></line>
+                        <line x1="17" y1="9" x2="23" y2="15"></line>
+                    </svg>
+                    <p>Clique para ativar o áudio</p>
+                </div>
+            </div>
+
             <p class="subtitle">O mesmo profissional que hoje ganha <strong>R$5 mil</strong> pode estar ganhando <strong>R$15 mil</strong> em uma posição de liderança estratégica</p>
             <p>Descubra como estruturar todos os processos para conquistar sua promoção executiva, aumentar seu salário em 200% e ser reconhecido como líder de alto impacto mesmo que você nunca tenha ocupado um cargo de gestão.</p>
             <a href="#investimento" class="cta-button">Quero Conquistar Meu Cargo Executivo</a>
@@ -133,31 +147,6 @@
                     <p class="achievement">CTO em Startup em 6 meses</p>
                 </div>
 
-                <div class="case-card">
-                    <div class="icon-wrapper">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
-                            <circle cx="12" cy="7" r="4"></circle>
-                        </svg>
-                    </div>
-                    <h3>ANDRÉ P.</h3>
-                    <p class="role">Supervisor Comercial</p>
-                    <p class="result">De R$7.000 para R$19.500</p>
-                    <p class="achievement">Diretor Comercial em 5 meses</p>
-                </div>
-
-                <div class="case-card">
-                    <div class="icon-wrapper">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
-                            <circle cx="12" cy="7" r="4"></circle>
-                        </svg>
-                    </div>
-                    <h3>PAULA M.</h3>
-                    <p class="role">Analista de Projetos</p>
-                    <p class="result">De R$6.200 para R$15.800</p>
-                    <p class="achievement">Gerente de PMO em 4 meses</p>
-                </div>
             </div>
             <div style="text-align: center; margin-top: 60px;">
                 <a href="#investimento" class="cta-button">Quero Ser o Próximo</a>
@@ -213,6 +202,11 @@
         <div class="container">
             <h2>Quem é Juliano Bianchesi?</h2>
             <div class="mentor-content">
+                <div class="mentor-photo-wrapper">
+                    <div class="mentor-photo">
+                        <img src="retrato-palestra-fal (2).jpg" alt="Juliano Bianchesi - Mentor Executivo">
+                    </div>
+                </div>
                 <h3>Mentor Executivo e Especialista em Desenvolvimento de Lideranças de Alto Impacto</h3>
                 
                 <div class="mentor-stats">
@@ -257,7 +251,25 @@
                 <p>Formado em Gestão de Negócios, com especializações em Psicanálise, TCC e PNL, desenvolvi a metodologia <strong>High Performance Executive™</strong> — um sistema completo que transforma profissionais competentes em líderes estratégicos reconhecidos.</p>
                 
                 <p>Atendi profissionais de empresas como <strong>Ambev, Itaú, Magazine Luiza, Google, Natura</strong> e dezenas de outras organizações de todos os portes.</p>
-                
+
+                <div class="companies-logos">
+                    <div class="company-logo">
+                        <img src="Logos-empresas/ambev.png" alt="Ambev">
+                    </div>
+                    <div class="company-logo">
+                        <img src="Logos-empresas/Itau.png" alt="Itaú">
+                    </div>
+                    <div class="company-logo">
+                        <img src="Logos-empresas/magalu.svg" alt="Magazine Luiza">
+                    </div>
+                    <div class="company-logo">
+                        <img src="Logos-empresas/google.svg" alt="Google">
+                    </div>
+                    <div class="company-logo">
+                        <img src="Logos-empresas/natura-logo.svg" alt="Natura">
+                    </div>
+                </div>
+
                 <p>Hoje, como fundador da <strong>Mentoria Next Level</strong>, ajudo brasileiros (em empresas nacionais e multinacionais) a transformarem suas trajetórias profissionais, conquistarem cargos executivos e multiplicarem seus salários em meses, não anos.</p>
                 
                 <div class="mentor-highlights">
@@ -301,6 +313,19 @@
                 </ul>
             </div>
 
+            <div class="guarantee-badge">
+                <div class="badge-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                        <path d="M9 12l2 2 4-4"></path>
+                    </svg>
+                </div>
+                <div class="badge-content">
+                    <h4>Garantia de 90 Dias</h4>
+                    <p>Se você seguir o protocolo completo e não obtiver resultados mensuráveis em sua carreira, devolvemos 100% do seu investimento.</p>
+                </div>
+            </div>
+
             <div class="urgency">
                 <p>São apenas 8 vagas por turma</p>
                 <p>O processo é seletivo</p>
@@ -319,6 +344,44 @@
             <a href="#investimento" class="cta-button">Aplicar Para Mentoria</a>
         </div>
     </section>
+
+    <script>
+        // Carregar a API do YouTube
+        var tag = document.createElement('script');
+        tag.src = "https://www.youtube.com/iframe_api";
+        var firstScriptTag = document.getElementsByTagName('script')[0];
+        firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+        var player;
+        function onYouTubeIframeAPIReady() {
+            player = new YT.Player('hero-video', {
+                videoId: 'zrGcaeNHVyI',
+                playerVars: {
+                    'autoplay': 1,
+                    'mute': 1,
+                    'controls': 0,
+                    'loop': 1,
+                    'playlist': 'zrGcaeNHVyI'
+                },
+                events: {
+                    'onReady': onPlayerReady
+                }
+            });
+        }
+
+        function onPlayerReady(event) {
+            // Adicionar evento de clique no overlay
+            document.getElementById('mute-overlay').addEventListener('click', function() {
+                // Esconder o overlay
+                this.classList.add('hidden');
+
+                // Ativar áudio e reiniciar
+                player.unMute();
+                player.stopVideo();
+                player.playVideo();
+            });
+        }
+    </script>
 
 </body>
 </html>
