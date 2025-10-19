@@ -350,6 +350,10 @@
         firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 
         var player;
+        var watchedTime = 0;
+        var investmentShown = false;
+        var videoCheckInterval;
+
         function onYouTubeIframeAPIReady() {
             player = new YT.Player('hero-video', {
                 videoId: 'zrGcaeNHVyI',
@@ -361,7 +365,8 @@
                     'playlist': 'zrGcaeNHVyI'
                 },
                 events: {
-                    'onReady': onPlayerReady
+                    'onReady': onPlayerReady,
+                    'onStateChange': onPlayerStateChange
                 }
             });
         }
@@ -377,6 +382,46 @@
                 player.stopVideo();
                 player.playVideo();
             });
+        }
+
+        function onPlayerStateChange(event) {
+            // Se o vídeo está tocando
+            if (event.data == YT.PlayerState.PLAYING && !investmentShown) {
+                // Iniciar rastreamento do tempo
+                videoCheckInterval = setInterval(checkVideoTime, 1000);
+            } else {
+                // Parar rastreamento se pausou
+                if (videoCheckInterval) {
+                    clearInterval(videoCheckInterval);
+                }
+            }
+        }
+
+        function checkVideoTime() {
+            if (player && player.getCurrentTime) {
+                var currentTime = player.getCurrentTime();
+
+                // Verificar se assistiu 3 minutos (180 segundos)
+                if (currentTime >= 180 && !investmentShown) {
+                    showInvestmentSection();
+                }
+            }
+        }
+
+        function showInvestmentSection() {
+            investmentShown = true;
+            document.getElementById('investimento').classList.add('visible');
+
+            // Mostrar também o footer CTA
+            var footerCta = document.querySelector('.footer-cta');
+            if (footerCta) {
+                footerCta.classList.add('visible');
+            }
+
+            // Parar o rastreamento
+            if (videoCheckInterval) {
+                clearInterval(videoCheckInterval);
+            }
         }
 
         // Animações de Scroll
